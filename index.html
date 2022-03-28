@@ -28,7 +28,7 @@
         <a class="header-link" href="./index.html">
           <img
             class="header-logo"
-            src="./images/icons/logo.svg"
+            src="./images/Logo.jpeg"
             alt="Лого"
             width="68"
             height="55"
@@ -103,7 +103,7 @@
             <li class="about-item">
               <img
                 class="about-img"
-                src="./images/about/img-1.jpg"
+                src="./images/section_1.jpeg"
                 alt="Бритье бороды"
                 width="270"
                 height="445"
@@ -112,7 +112,7 @@
             <li class="about-item">
               <img
                 class="about-img"
-                src="./images/about/img-2.jpg"
+                src="./images/section_1_1.jpeg"
                 alt="Стрижка под опасную бритву"
                 width="270"
                 height="445"
@@ -201,7 +201,7 @@
 
       <!-- Секция Преимущества -->
       <section class="advantages section">
-        <div class="container">
+        <div class="container advantages-wrapper">
           <ul class="advantages-list list">
             <li class="advantages-item">
               <p class="advantages-quantity">600</p>
@@ -220,14 +220,18 @@
               <p class="advantages-descr">Подарков постоянным клиентам</p>
             </li>
           </ul>
-          <p class="uppertitle uppertitle-mode-light">
-            старая традиционная школа
-          </p>
-          <h2 class="title title-mode-light">Почему приходят именно к нам?</h2>
-          <p class="subtitle subtitle-mode-light">
-            О нас говорят только хорошее. Но лучше 1 раз увидеть и
-            прочувствовать, чем 10 раз прочитать.
-          </p>
+          <div class="advantages-text">
+            <p class="uppertitle uppertitle-mode-light">
+              старая традиционная школа
+            </p>
+            <h2 class="title title-mode-light">
+              Почему приходят именно к нам?
+            </h2>
+            <p class="subtitle subtitle-mode-light">
+              О нас говорят только хорошее. Но лучше 1 раз увидеть и
+              прочувствовать, чем 10 раз прочитать.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -238,83 +242,133 @@
             для настоящих ценителей атмосферы
           </p>
           <h2 class="title title-mode-light">Наши мастера</h2>
-          <ul class="team-list list">
-            <li class="team-member">
-              <img
-                class="team-avatar"
-                src="./images/masters/img1.jpg"
-                alt="John Smith"
-                width="370"
-                height="346"
-              />
-              <h3 class="team-headline">John Smith</h3>
-              <p class="team-position" lang="en">Extreme Barber</p>
-              <ul class="socials list">
-                <li class="socials-item">
-                  <a class="socials-link link" href="">Instagram</a>
-                </li>
-                <li class="socials-item">
-                  <a class="socials-link link" href="">Twitter</a>
-                </li>
-                <li class="socials-item">
-                  <a class="socials-link link" href="">Facebook</a>
-                </li>
-                <li class="socials-item">
-                  <a class="socials-link link" href="">LinkedIn</a>
-                </li>
-              </ul>
-            </li>
-            <li class="team-member">
-              <img
-                class="team-avatar"
-                src="./images/masters/img2.jpg"
-                alt="Michele Doe"
-                width="370"
-                height="346"
-              />
-              <h3 class="team-headline">Michele Doe</h3>
-              <p class="team-position" lang="en">Extreme Barber</p>
-              <ul class="socials list">
-                <li class="socials-item">
-                  <a class="socials-link link" href="">Instagram</a>
-                </li>
-                <li class="socials-item">
-                  <a class="socials-link link" href="">Twitter</a>
-                </li>
-                <li class="socials-item">
-                  <a class="socials-link link" href="">Facebook</a>
-                </li>
-                <li class="socials-item">
-                  <a class="socials-link link" href="">LinkedIn</a>
-                </li>
-              </ul>
-            </li>
-            <li class="team-member">
-              <img
-                class="team-avatar"
-                src="./images/masters/img3.jpg"
-                alt="Alan Black"
-                width="370"
-                height="346"
-              />
-              <h3 class="team-headline">Alan Black</h3>
-              <p class="team-position" lang="en">Extreme Barber</p>
-              <ul class="socials list">
-                <li class="socials-item">
-                  <a class="socials-link link" href="">Instagram</a>
-                </li>
-                <li class="socials-item">
-                  <a class="socials-link link" href="">Twitter</a>
-                </li>
-                <li class="socials-item">
-                  <a class="socials-link link" href="">Facebook</a>
-                </li>
-                <li class="socials-item">
-                  <a class="socials-link link" href="">LinkedIn</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <div class="team-container">
+            <ul class="team-list list">
+              <li class="team-member">
+                <img
+                  class="team-avatar"
+                  src="./images/master_1.jpeg"
+                  alt="John Smith"
+                  width="370"
+                  height="346"
+                />
+                <h3 class="team-headline">John Smith</h3>
+                <p class="team-position" lang="en">Extreme Barber</p>
+                <ul class="socials list">
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="team-member">
+                <img
+                  class="team-avatar"
+                  src="./images/master_2.jpeg"
+                  alt="Michele Doe"
+                  width="370"
+                  height="346"
+                />
+                <h3 class="team-headline">Michele Doe</h3>
+                <p class="team-position" lang="en">Extreme Barber</p>
+                <ul class="socials list">
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="team-member">
+                <img
+                  class="team-avatar"
+                  src="./images/master_3.jpeg"
+                  alt="Alan Black"
+                  width="370"
+                  height="346"
+                />
+                <h3 class="team-headline">Alan Black</h3>
+                <p class="team-position" lang="en">Extreme Barber</p>
+                <ul class="socials list">
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a class="socials-link link" href="">
+                      <svg class="social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -329,7 +383,7 @@
             <li class="gallery-item">
               <img
                 class="gallery-img"
-                src="./images/gallery/pic-1.jpg"
+                src="./images/foto_1.jpeg"
                 alt=""
                 width="270"
                 height="360"
@@ -338,7 +392,7 @@
             <li class="gallery-item">
               <img
                 class="gallery-img"
-                src="./images/gallery/pic-2.jpg"
+                src="./images/foto_2.jpeg"
                 alt=""
                 width="270"
                 height="360"
@@ -347,7 +401,7 @@
             <li class="gallery-item">
               <img
                 class="gallery-img"
-                src="./images/gallery/pic-3.jpg"
+                src="./images/foto_3.jpeg"
                 alt=""
                 width="270"
                 height="360"
@@ -356,7 +410,7 @@
             <li class="gallery-item">
               <img
                 class="gallery-img"
-                src="./images/gallery/pic-4.jpg"
+                src="./images/foto_4.jpeg"
                 alt=""
                 width="270"
                 height="360"
@@ -368,31 +422,48 @@
 
       <!-- Секция Контакты -->
       <section class="contacts section">
-        <div class="container">
-          <h2 class="title title-mode-dark">Контакты</h2>
-          <ul class="contacts-list list">
-            <li class="contacts-item">
-              <address class="contacts-address">
-                ул. Васильковая, 7А Киев, 08132
-              </address>
-            </li>
-            <li class="contacts-item">
-              <a class="contacts-link link" href="tel:+380441111111"
-                >+38 044 111 11 11</a
-              >
-            </li>
-            <li class="contacts-item">
-              <a class="contacts-link link" href="mailto:barbershop@email.com"
-                >barbershop@email.com</a
-              >
-            </li>
-          </ul>
+        <div class="container contacts-wrapper">
+          <div class="form">
+            <h2 class="title title-form">Онлайн-запись</h2>
+            <ul class="form-list list">
+              <li class="form-item">
+                <p class="form-text form-text-name">Имя&#42;</p>
+              </li>
+              <li class="form-item">
+                <p class="form-text form-text-phone">Телефон&#42;</p>
+              </li>
+              <li class="form-item">
+                <p class="form-text">сообщение</p>
+              </li>
+              <button type="button" class="form-button">отправить</button>
+            </ul>
+          </div>
+          <div class="contacts-bgi">
+            <h2 class="title title-mode-dark">Контакты</h2>
+            <ul class="contacts-list list">
+              <li class="contacts-item">
+                <address class="contacts-address">
+                  ул. Васильковая, 7А Киев, 08132
+                </address>
+              </li>
+              <li class="contacts-item">
+                <a class="contacts-link link" href="tel:+380441111111"
+                  >+38 044 111 11 11</a
+                >
+              </li>
+              <li class="contacts-item">
+                <a class="contacts-link link" href="mailto:barbershop@email.com"
+                  >barbershop@email.com</a
+                >
+              </li>
+            </ul>
 
-          <h3 class="uppertitle uppertitle-mode-dark">время работы</h3>
-          <p class="contacts-schedule">
-            Ежедневно с <time datetime="9:00">9:00</time> до
-            <time datetime="22:00">22:00</time>
-          </p>
+            <h3 class="uppertitle uppertitle-mode-dark">время работы</h3>
+            <p class="contacts-schedule">
+              Ежедневно с <time datetime="9:00">9:00</time> до
+              <time datetime="22:00">22:00</time>
+            </p>
+          </div>
         </div>
       </section>
     </main>
@@ -413,5 +484,3 @@
     </footer>
   </body>
 </html>
-
-

@@ -39,13 +39,6 @@ h3,
 h4,
 p {
   margin-top: 0;
-}
-
-h1:last-child,
-h2:last-child,
-h3:last-child,
-h4:last-child,
-p:last-child {
   margin-bottom: 0;
 }
 
@@ -104,6 +97,7 @@ p:last-child {
 }
 
 .title-mode-light {
+  margin-bottom: 44px;
   color: var(--secondary-txt--mode-light);
 }
 
@@ -176,8 +170,6 @@ p:last-child {
 
 /* Header */
 .header {
-  padding-top: 32px;
-  padding-bottom: 32px;
   background-color: var(--primary-bg--mode-dark);
 }
 .header-container {
@@ -195,11 +187,16 @@ p:last-child {
 }
 
 .nav-item {
+  display: flex;
   margin-right: 40px;
 }
 
 .nav-item:last-child {
   margin: 0;
+}
+.nav-link {
+  padding-top: 52px;
+  padding-bottom: 52px;
 }
 
 .header-wrapper {
@@ -225,6 +222,9 @@ p:last-child {
 
 .header-phone {
   margin-right: 40px;
+  padding-top: 52px;
+  padding-bottom: 52px;
+
   text-transform: uppercase;
 }
 .header-phone:hover,
@@ -328,7 +328,6 @@ p:last-child {
 }
 
 .price-item {
-  outline: 1px solid red;
   flex-basis: calc(100% / 2);
   padding: 30px 40px;
 
@@ -365,8 +364,23 @@ p:last-child {
 
   color: var(--secondary-txt--mode-light);
 }
+.advantages-wrapper {
+  display: flex;
+}
+.advantages-list {
+  flex-basis: calc(100% / 2);
+  text-align: center;
+}
+.advantages-text {
+  width: 500px;
+  margin-left: auto;
+}
+.advantages-descr {
+  font-size: 18px;
+}
 
 /* Team */
+
 .team {
   background-color: var(--secondary-bg--mode-light);
 }
@@ -386,20 +400,174 @@ p:last-child {
 
   color: var(--accent-cl);
 }
+.team-list {
+  display: flex;
+}
+.team-member {
+  margin-right: 30px;
 
+  text-align: center;
+}
+.team-member:last-child {
+  margin-right: 0;
+}
+.team-headline {
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.team-position {
+  margin-bottom: 30px;
+}
+.team-avatar {
+  margin-bottom: 30px;
+}
+/* Gallery*/
+.gallery .uppertitle-mode-light {
+  margin-bottom: 44px;
+}
+.gallery-list {
+  display: flex;
+}
+.gallery-item {
+  margin-right: 30px;
+}
+.gallery-item:last-child {
+  margin-right: 0;
+}
 /* Contacts */
 .contacts {
   background-color: var(--secondary-bg--mode-dark);
+  background-image: url(../images/Bg.png);
+  background-size: 625px 644px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+}
+.contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.form {
+  padding-left: 55px;
+  padding-right: 40px;
+}
+.title-form {
+  margin-bottom: 44px;
+  color: var(--primary-txt--mode-dark);
+}
+.form-item:first-child {
+  margin-bottom: 53px;
+}
+.form-text-name {
+  position: relative;
+}
+.form-text-phone {
+  position: absolute;
+  margin-top: -83px;
+  margin-left: 264px;
+}
+.form-text {
+  cursor: pointer;
+}
+
+.form-text:hover,
+.form-text:focus {
+  color: var(--primary-txt--mode-dark);
+}
+.form-button {
+  margin-top: 105px;
+
+  max-width: 350px;
+  min-width: 160px;
+  padding: 12px 20px;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  border: 1px solid var(--accent-cl);
+  border-radius: 25px;
+  color: var(--primary-txt--mode-dark);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.contacts .title-mode-dark {
+  margin-bottom: 40px;
 }
 
 .contacts-address {
   font-style: normal;
 }
+.contacts-item {
+  margin-bottom: 20px;
+}
+.contacts-item:last-child {
+  margin-bottom: 70px;
+}
 
 .contacts-link {
   color: currentColor;
 }
+.socials {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.socials-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 
+  color: var(--secondary-txt--mode-light);
+  background-color: var(--primary-bg--mode-light);
+}
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  color: var(--secondary-txt--mode-light);
+}
+.socials-link:hover,
+.socials-link:focus {
+  color: var(--accent-cl);
+}
+.social-icon {
+  text-align: center;
+  fill: currentColor;
+}
+
+.contacts-bgi {
+  padding-left: 100px;
+  padding-right: 105px;
+}
+.contacts .uppertitle-mode-dark {
+  position: relative;
+  margin-bottom: 20px;
+}
+.contacts .uppertitle-mode-dark::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  content: "";
+  display: block;
+
+  width: 1px;
+  height: 60px;
+  background: rgba(157, 164, 189, 0.4);
+
+  transform: rotate(90deg);
+}
 /**
 |--------------------------------------------------
 | селектор ссылки по атрибуту, который начинается
