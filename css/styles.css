@@ -21,6 +21,10 @@
   /* Темная тема фона*/
   --primary-bg--mode-dark: #191c26;
   --secondary-bg--mode-dark: #111319;
+
+  /* Остальные эффекты */
+  --anim-fast: 250ms ease-in;
+  --anim-slow: 500ms ease-in-out;
 }
 
 /* Common styles */
@@ -64,6 +68,8 @@ p {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  outline: 3px solid blue;
 }
 
 .uppertitle {
@@ -164,6 +170,8 @@ p {
   border-radius: 25px;
   background-color: transparent;
   cursor: pointer;
+
+  transition: background-color var(--anim-slow), border-color var(--anim-slow);
 }
 
 .main-btn-mode-light {
@@ -206,6 +214,9 @@ p {
 .header-link {
   margin-right: 70px;
 }
+.header-logo {
+  animation: bounce-top 0.9s both;
+}
 
 .nav-list {
   display: flex;
@@ -239,6 +250,8 @@ p {
   letter-spacing: 0.1em;
 
   color: var(--primary-txt--mode-dark);
+
+  transition: color var(--anim-fast);
 }
 
 .nav-link:hover,
@@ -379,7 +392,7 @@ p {
 }
 .price-inner-item {
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 20px;
 }
 
@@ -387,27 +400,32 @@ p {
   margin-bottom: 0;
 }
 
-.price-inner-name,
-.price-inner-cost {
-  color: var(--main-txt--mode-dark);
-}
-
-.price-inner-name {
-  display: flex;
-  align-items: flex-end;
-}
-.price-inner-name::after {
+.price-inner-item::after {
   content: "";
   display: block;
-  margin-right: 6px;
-  margin-left: 6px;
+  margin: 0 6px;
 
-  width: 235px;
+  width: 100%;
   height: 1px;
 
   background-color: rgba(157, 164, 189, 0.12);
 }
+/* Вариант оформления через свойство элемента занимать
+  все доступное пространство внутри флекс-контейнера flex-grow: 1;
+  !!СТАВИМ НА ПСЕВДОЭЛЕМЕНТ!!
+  Тогда Вариант оформления через запрет на сжатие элемента
+  внутри флекс-контейнера  flex-shrink: 0; и width: 100%; тоже убираем*/
 
+.price-inner-name,
+.price-inner-cost {
+  flex-shrink: 0;
+  color: var(--main-txt--mode-dark);
+}
+/* Изменение порядка элемента внутри флекс-контейнера
+  чем больше значение, тем дальше элемент в очереди */
+.price-inner-cost {
+  order: 2;
+}
 .price .main-btn {
   display: block;
   margin-left: auto;
@@ -415,27 +433,76 @@ p {
 }
 
 /* Advantages */
+.advantages-container {
+  display: flex;
+  gap: 30px;
+}
+.advantages-left-side,
+.advantages-text {
+  flex-basis: 50%;
+}
+.advantages-list {
+  width: 370px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+.advantages-item {
+  width: 170px;
+  min-height: 133px;
+  padding: 18px;
+
+  text-align: center;
+
+  background-color: var(--secondary-bg--mode-light);
+}
+.advantages-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.advantages-item:first-child {
+  margin-bottom: 30px;
+}
+
+.advantages-item:nth-last-child(odd) {
+  margin-top: 30px;
+}
+
 .advantages-quantity {
+  position: relative;
+  display: inline-block;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   letter-spacing: 0.05em;
 
+  margin-bottom: 6px;
+
   color: var(--secondary-txt--mode-light);
 }
-.advantages-wrapper {
-  display: flex;
-}
-.advantages-list {
-  flex-basis: calc(100% / 2);
+.advantages-quantity::after {
+  position: absolute;
+  top: 5px;
+  /* right: -13px; */
+  left: calc(100% + 2px);
+  content: "+";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.37;
   text-align: center;
+
+  color: var(--accent-cl);
 }
-.advantages-text {
-  width: 500px;
-  margin-left: auto;
-}
+
 .advantages-descr {
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  color: var(--secondary-txt--mode-light);
 }
 
 /* Team */
@@ -612,6 +679,12 @@ p {
   color: var(--primary-txt--mode-dark);
   background-color: transparent;
   cursor: pointer;
+
+  transition: background-color var(--anim-slow), border-color var(--anim-slow);
+}
+.form-button:hover,
+.form-button:focus {
+  background-color: var(--accent-cl);
 }
 
 .contacts .title-mode-dark {
@@ -659,9 +732,11 @@ p {
 
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 
   color: var(--secondary-txt--mode-light);
-  border-radius: 50%;
+
+  transition: color var(--anim-fast), background-color var(--anim-fast);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -670,6 +745,7 @@ p {
 }
 .social-icon {
   fill: currentColor;
+  transition: fill var(--anim-fast);
 }
 
 .contacts-bgi {
@@ -747,4 +823,142 @@ p {
 
 .footer-copyright {
   margin-bottom: 0;
+}
+
+/* modal window */
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: rgba(9, 11, 19, 0.6);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+
+  transition: opacity var(--anim-slow), visibility var(--anim-slow);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 500px;
+  height: 400px;
+  padding: 25px;
+
+  border-radius: 15px;
+
+  background-color: #fff;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+/* pulsation animation for button */
+.pulsate {
+  position: relative;
+  z-index: 10;
+
+  background-color: #ff6c00;
+}
+
+.pulsate span {
+  position: relative;
+  z-index: 10;
+}
+
+.pulsate::after,
+.pulsate::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+
+  background-color: rgb(255, 106, 0);
+}
+
+.pulsate::after {
+  animation: pulsation 4s 400ms ease-in-out infinite both;
+}
+.pulsate::before {
+  animation: pulsation 4s ease-in-out infinite both;
+}
+
+@keyframes pulsation {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* logo anomation */
+@keyframes bounce-top {
+  0% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
 }
