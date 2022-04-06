@@ -54,7 +54,11 @@
           <a class="header-phone link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="main-btn main-btn-mode-dark" type="button">
+          <button
+            class="main-btn main-btn-mode-dark pulsate"
+            type="button"
+            data-modal-open
+          >
             онлайн-запись
           </button>
         </div>
@@ -248,13 +252,20 @@
           <div class="team-container">
             <ul class="team-list list">
               <li class="team-member">
-                <img
-                  class="team-avatar"
-                  src="./images/master_1.jpeg"
-                  alt="John Smith"
-                  width="370"
-                  height="346"
-                />
+                <div class="team-thumb">
+                  <img
+                    class="team-avatar"
+                    src="./images/master_1.jpeg"
+                    alt="John Smith"
+                    width="370"
+                    height="346"
+                  />
+                  <p class="team-decr">
+                    John Smith молодой мастер, который уже успел заслужить
+                    звание ТОП – мастера , доверие и положительные отзывы
+                    клиентов
+                  </p>
+                </div>
                 <div class="team-wrapper">
                   <h3 class="team-headline">John Smith</h3>
                   <p class="team-position" lang="en">Extreme Barber</p>
@@ -291,13 +302,19 @@
                 </div>
               </li>
               <li class="team-member">
-                <img
-                  class="team-avatar"
-                  src="./images/master_2.jpeg"
-                  alt="Michele Doe"
-                  width="370"
-                  height="346"
-                />
+                <div class="team-thumb">
+                  <img
+                    class="team-avatar"
+                    src="./images/master_2.jpeg"
+                    alt="Michele Doe"
+                    width="370"
+                    height="346"
+                  />
+                  <p class="team-decr">
+                    Michele Doe очень энергичный человек и способен делиться
+                    своей энергией, заряжать позитивом
+                  </p>
+                </div>
                 <div class="team-wrapper">
                   <h3 class="team-headline">Michele Doe</h3>
                   <p class="team-position" lang="en">Extreme Barber</p>
@@ -334,13 +351,19 @@
                 </div>
               </li>
               <li class="team-member">
-                <img
-                  class="team-avatar"
-                  src="./images/master_3.jpeg"
-                  alt="Alan Black"
-                  width="370"
-                  height="346"
-                />
+                <div class="team-thumb">
+                  <img
+                    class="team-avatar"
+                    src="./images/master_3.jpeg"
+                    alt="Alan Black"
+                    width="370"
+                    height="346"
+                  />
+                  <p class="team-decr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorem vero autem officiis maiores neque explicabo.
+                  </p>
+                </div>
                 <div class="team-wrapper">
                   <h3 class="team-headline">Alan Black</h3>
                   <p class="team-position" lang="en">Extreme Barber</p>
@@ -509,6 +532,6 @@
       </div>
     </div>
 
-    <script src="./js/modal.js"></script>
+    <script src="./modal.js"></script>
   </body>
 </html>
