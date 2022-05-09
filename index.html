@@ -455,20 +455,44 @@
       <!-- Секция Контакты -->
       <section class="contacts section">
         <div class="container contacts-wrapper">
-          <div class="form">
+          <div class="contacts-left">
             <h2 class="title title-form">Онлайн-запись</h2>
-            <ul class="form-list list">
-              <li class="form-item">
-                <p class="form-text form-text-name">Имя&#42;</p>
-              </li>
-              <li class="form-item">
-                <p class="form-text form-text-phone">Телефон&#42;</p>
-              </li>
-            </ul>
-            <p class="form-text form-text-long">сообщение</p>
-            <button type="button" class="form-button">отправить</button>
+            <form class="form contacts-form" action="form">
+              <div class="form-group">
+                <label class="form-label" for="name">
+                  <span class="form-caption">Имя&#42;</span>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="name"
+                    minlenght="3"
+                    placeholder=" "
+                  />
+                </label>
+                <label class="form-label" for="tel">
+                  <span class="form-caption">Телефон&#42;</span>
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="tel"
+                    required
+                    placeholder=" "
+                  />
+                </label>
+              </div>
+              <label class="form-field" for="messege">
+                <textarea
+                  class="form-message"
+                  name="message"
+                  rows="5"
+                  placeholder="Введите текст..."
+                ></textarea>
+                <span class="form-caption">сообщение</span></label
+              >
+              <button type="submit" class="form-button">отправить</button>
+            </form>
           </div>
-          <div class="contacts-bgi">
+          <div class="contacts-right">
             <h2 class="title title-mode-dark">Контакты</h2>
             <ul class="contacts-list list">
               <li class="contacts-item">
@@ -505,7 +529,6 @@
         </div>
       </section>
     </main>
-
     <!-- Подвал сайта -->
     <footer class="footer">
       <div class="container footer-container">
